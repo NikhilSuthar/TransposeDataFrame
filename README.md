@@ -21,7 +21,7 @@ Example of Spark Method to Transpose input DataFrame
 
 
 
-  Then below DataFrame will be Transpose DataFrame of DataFrame `df`
+  Then below DataFrame will be Transpose DataFrame of `df`
   
       +--------+-----+------+-------+--------+
       |Products|Pants|Shirts|Sweater|Trousers|
