@@ -21,7 +21,7 @@ Example of Spark Method to Transpose input DataFrame
 
 
 
-  Then below DataFrame will be Transpose DataFrame of DataFrame `df`
+  Then below DataFrame will be Transpose DataFrame of `df`
   
       +--------+-----+------+-------+--------+
       |Products|Pants|Shirts|Sweater|Trousers|
@@ -47,7 +47,8 @@ Example of Spark Method to Transpose input DataFrame
    
    
  <h1>How to use TransposeDF </h1>
-    It is very easy to use. You just need to copy **TransposeDF** method from [here]() to your code and call it as below:
+    
+   It is very easy to use. You just need to copy **TransposeDF** method from [here](https://github.com/NikhilSuthar/TransposeDataFrame/blob/master/src/main/scala/com/spark/example/DFTranspose.scala) to your code and call it as below:
     
     `TransposeDF(productQtyDF, Seq("Small", "Medium", "Large", "ExLarge"), "Products")`
     
