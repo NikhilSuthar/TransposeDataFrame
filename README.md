@@ -50,12 +50,11 @@ Example of Spark Method to Transpose input DataFrame
     
    It is very easy to use. You just need to copy **TransposeDF** method from [here](https://github.com/NikhilSuthar/TransposeDataFrame/blob/master/src/main/scala/com/spark/example/DFTranspose.scala) to your code and call it as below:
     
-   **TransposeDF(productQtyDF, Seq("Small", "Medium", "Large", "ExLarge"), "Products")**
+    TransposeDF(productQtyDF, Seq("Small", "Medium", "Large", "ExLarge"), "Products")
     
    OR
    
-   `val ColumnSeq:Seq[String] =  Seq("Small", "Medium", "Large", "ExLarge")`
-   
-   `val transDF = TransposeDF(productQtyDF,ColumnSeq, "Products")`
+    val ColumnSeq:Seq[String] =  Seq("Small", "Medium", "Large", "ExLarge")   
+    val transDF = TransposeDF(productQtyDF,ColumnSeq, "Products")
     
      
