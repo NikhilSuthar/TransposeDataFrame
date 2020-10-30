@@ -46,9 +46,9 @@ Example of Spark Method to Transpose input DataFrame
    * Third Parameter is pivot column (column which rows required to transpose into columns). (eg. "Products" in above example)
    
    
- <h1>How to use TransposeDF </h1>
+ <h1>How to use TransposeDF in Spark Scala</h1>
     
-   It is very easy to use. You just need to copy **TransposeDF** method from [here](https://github.com/NikhilSuthar/TransposeDataFrame/blob/master/src/main/scala/com/spark/example/DFTranspose.scala) to your code and call it as below:
+   It is very easy to use. You just need to copy Scala **TransposeDF** method from [here](https://github.com/NikhilSuthar/TransposeDataFrame/blob/master/src/main/scala/com/spark/example/DFTranspose.scala) to your code and call it as below:
     
     TransposeDF(df, Seq("Small", "Medium", "Large", "ExLarge"), "Products")
     
@@ -56,5 +56,16 @@ Example of Spark Method to Transpose input DataFrame
    
     val ColumnSeq:Seq[String] =  Seq("Small", "Medium", "Large", "ExLarge")   
     val transDF = TransposeDF(df,ColumnSeq, "Products")
+   
+  <h1>How to use TransposeDF in PySpark</h1>
+    
+   Same as Scala copy Python **TransposeDF** from [here](https://github.com/NikhilSuthar/TransposeDataFrame/blob/master/src/main/scala/com/spark/example/DFTranspose.scala) to your code and call it as below:
+    
+    TransposeDF(df, ["Small", "Medium", "Large", "ExLarge"], "Products")
+    
+   OR
+   
+    ColumnList =  ["Small", "Medium", "Large", "ExLarge"]   
+    transDF = TransposeDF(df,ColumnList, "Products")
     
      
