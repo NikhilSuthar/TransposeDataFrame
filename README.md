@@ -59,7 +59,7 @@ Example of Spark Method to Transpose input DataFrame
    
   <h1>How to use TransposeDF in PySpark</h1>
     
-   Same as Scala copy Python **TransposeDF** from [here](https://github.com/NikhilSuthar/TransposeDataFrame/blob/master/src/main/scala/com/spark/example/DFTranspose.scala) to your code and call it as below:
+   Same as Scala, copy Python **TransposeDF** from [here](https://github.com/NikhilSuthar/TransposeDataFrame/blob/master/src/main/scala/com/spark/example/DFTranspose.py) to your code and call it as below:
     
     TransposeDF(df, ["Small", "Medium", "Large", "ExLarge"], "Products")
     
