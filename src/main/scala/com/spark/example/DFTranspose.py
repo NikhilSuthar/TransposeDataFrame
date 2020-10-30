@@ -4,13 +4,13 @@ from pyspark.sql import SparkSession
 
 
 def TransposeDF(df, columns, pivotCol):
-...     columnsValue = list(map(lambda x: str("'") + str(x) + str("',")  + str(x), columns))
-...     stackCols = ','.join(x for x in columnsValue)
-...     df_1 = df.selectExpr(pivotCol, "stack(" + str(len(columns)) + "," + stackCols + ")")\
-...              .select(pivotCol, "col0", "col1")
-...     final_df = df_1.groupBy(col("col0")).pivot(pivotCol).agg(concat_ws("", collect_list(col("col1"))))\
-...                    .withColumnRenamed("col0", pivotCol)
-...     return final_df
+    columnsValue = list(map(lambda x: str("'") + str(x) + str("',")  + str(x), columns))
+    stackCols = ','.join(x for x in columnsValue)
+    df_1 = df.selectExpr(pivotCol, "stack(" + str(len(columns)) + "," + stackCols + ")")\
+             .select(pivotCol, "col0", "col1")
+    final_df = df_1.groupBy(col("col0")).pivot(pivotCol).agg(concat_ws("", collect_list(col("col1"))))\
+                   .withColumnRenamed("col0", pivotCol)
+    return final_df
 
 def main():
     DataList = [("Shirts", 10, 13, 34, 10), ("Trousers", 11, 2, 30, 20), ("Pants", 70, 43, 24, 60), ("Sweater", 101, 44, 54, 80)]
